@@ -17,15 +17,12 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-//    @Column(name = "order_number")
-//    private Integer orderNumber;
-
     @Column(name = "status")
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
 
     @ManyToOne
-    @JoinColumn(name = "coffee_id")
+    @JoinColumn(name = "coffee_table_id")
     private CoffeeTable coffeeTable;
 
     @OneToMany(
