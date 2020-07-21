@@ -19,8 +19,8 @@ public class CafeManagerApplication {
     public CommandLineRunner runner(UserRepository userRepository, BCryptPasswordEncoder encoder) {
         return args -> {
             User manager = new User();
-            manager.setFirstName("Mihran");
-            manager.setLastName("Bezjyan");
+            manager.setFirstName("Vardan");
+            manager.setLastName("Vardanyan");
             manager.setUsername("manager");
             manager.setPassword(encoder.encode("password"));
             manager.setManager(true);

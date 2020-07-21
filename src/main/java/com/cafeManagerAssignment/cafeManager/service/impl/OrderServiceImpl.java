@@ -43,7 +43,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public OrderDto updateOrderProduct(Long orderId, ProductInOrderDto productInOrderDto) {
         Order currentOrder = orderRepository.findById(orderId)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "So such order with orderId= " + orderId));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No such order with orderId = " + orderId));
 
         ProductInOrder existingProductInOrder = currentOrder.getProductInOrderList()
                 .stream()
